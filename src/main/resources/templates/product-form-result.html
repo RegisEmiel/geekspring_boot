@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.thymeleaf.org ">
+    <head>
+        <title>Product</title>
+    </head>
+    <body>
+        <h1>Product form result</h1>
+        <p th:text="'ID: ' + ${product.id}"></p>
+        <p th:text="'Title: ' + ${product.title}"></p>
+        <p th:text = "'Cost: ' + ${product.cost}"></p>
+    </body>
+</html>

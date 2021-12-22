@@ -1,0 +1,43 @@
+<!--<!DOCTYPE html>-->
+
+<!--<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--      xsi:schemaLocation="http://www.thymeleaf.org ">-->
+<!--    <body>-->
+<!--        <form action="processForm" modelAttribute="product">-->
+<!--            ID: <input path="id" />-->
+<!--            <br>-->
+<!--            Title: <input path="title" />-->
+<!--            <br>-->
+<!--            Cost: <input path="cost" />-->
+<!--            <br>-->
+<!--            <input type="submit" value="Submit" />-->
+<!--        </form>-->
+<!--    </body>-->
+<!--</html>-->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Add product</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>Add product</h1>
+
+        <form action="#" th:action="@{/product/addProductForm}" th:object="${product}" method="post">
+            <p>
+                ID: <input type="text" th:field="*{id}">
+            </p>
+            <p>
+                Title: <input type="text" th:field="*{title}">
+            </p>
+            <p>
+                Cost: <input type="text" th:field="*{cost}">
+            </p>
+            <p>
+                <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+            </p>
+        </form>
+    </body>
+</html>
